@@ -59,7 +59,7 @@ Follow these steps to get the application running on your local machine:
 Get the project files by cloning the repository or downloading the ZIP:
 
 ```bash
-git clone https://github.com/yourusername/studentcrud.git
+git clone https://github.com/nameispaul/studentcrud.git
 ```
 
 ### 2\. 📁 Place in XAMPP `htdocs`
