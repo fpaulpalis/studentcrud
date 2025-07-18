@@ -33,6 +33,8 @@ This project is based on the tutorial series:
 | **Read**     | <img src="https://github.com/user-attachments/assets/506fac89-8ece-41f4-a57a-0975f22aad98" width="600" /> |
 | **Update**   | <img src="https://github.com/user-attachments/assets/d191d314-12c9-4788-a341-48ca0ae2bf88" width="600" /> |
 | **Delete**   | <img src="https://github.com/user-attachments/assets/f02afc12-4f67-4a2b-a705-d6439611d74d" width="600" /> |
+| **Print**    | <img src="https://github.com/user-attachments/assets/be96c9ac-e76f-4789-8c0a-5b59335711d7"  width="600" /> |
+
 
 -----
 
