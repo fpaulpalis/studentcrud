@@ -21,6 +21,7 @@ This project is based on the tutorial series:
 * Logout
 * CRUD
 * Print
+* Boostrap
 
 -----
 ## 📸 Screenshots
