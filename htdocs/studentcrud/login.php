@@ -22,17 +22,19 @@ include 'conn.php';
 	}
 	?>
 	<form method="POST" action="login-action.php">
-		<div class="container col-md-3 mt-5 text-center">
-			<!-- Larger logo using Bootstrap class -->
-			<img src="https://sis-pucu.phinma.edu.ph/image/login/logo_college.png"
-				alt="PHINMA Logo"
-				class="img-fluid w-50 mb-3"
-				style="margin-top: 20px;">
+		<div class="container col-md-3 mt-5">
+			<center>
 
-			<h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
+				<img src="https://sis-pucu.phinma.edu.ph/image/login/logo_college.png"
+					alt="PHINMA Logo"
+					class="img-fluid w-50 mb-3"
+					style="margin-top: 20px;">
+			</center>
+
+			<h1 class="h3 mb-3 font-weight-normal text-center">Please Sign In</h1>
 
 			<div class="text-start">
-				<label for="username" class="font-weight-bold">Username:</label>
+				<label for="username" class="font-weight-bold" text-center>Username:</label>
 				<input type="text" name="username" class="form-control mb-3" placeholder="Username" required>
 
 				<label for="password" class="font-weight-bold">Password:</label>

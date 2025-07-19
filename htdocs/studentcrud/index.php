@@ -30,9 +30,18 @@ if (isset($_POST['btnSave'])) {
 // delete student
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
+
+    $student = mysqli_query($conn, "SELECT * FROM tbl_student WHERE student_id = $id");
+    $data = mysqli_fetch_assoc($student);
+
+    mysqli_query($conn, "INSERT INTO tbl_trash (student_id, full_name, email, address, contact_no)
+                            VALUES ('$data[student_id]', '$data[full_name]', '$data[email]', '$data[address]', '$data[contact_no]')");
+
     mysqli_query($conn, "DELETE FROM tbl_student WHERE student_id=$id");
+
     header('location: index.php?message=success-delete');
 }
+
 
 ?>
 
@@ -56,7 +65,7 @@ if (isset($_POST['btnUpdate'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP and BOOTSTRAP CRUD Tutorial</title>
+    <title>Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
@@ -99,37 +108,45 @@ if (isset($_POST['btnUpdate'])) {
         .delete {
             color: red;
         }
+
+        .btn i {
+            margin-right: 5px; 
+            vertical-align: middle; 
+        }
+        .container.d-flex.justify-content-center {
+            align-items: center; 
+        }
     </style>
 </head>
 
 <body>
     <section class="py-5 text-center bg-gray text-dark" >
         <div class="container">
-             <!-- Logo -->
-    <img src="https://sis-pucu.phinma.edu.ph/image/login/logo_college.png" 
-         alt="PHINMA Logo" 
-         style="width: 20%; margin-top: 20px">
+            <img src="https://sis-pucu.phinma.edu.ph/image/login/logo_college.png" 
+                alt="PHINMA Logo" 
+                style="width: 20%; margin-top: 20px">
 
-        <h1 class="display-5 fw-bold">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>        
+            <h1 class="display-5 fw-bold">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>         
         </div>
     </section>
 
+
     <div class="container d-flex justify-content-center" style="margin-top: 15px;">
-        <a href="#addStudentModal" class="btn btn-success btn-lg mx-2" data-toggle="modal"><span>Add New Student</span></a>
-        <a href="report.php" class="btn btn-primary btn-lg mx-2"><span>Print Report</span></a>
-        <a href="logout.php" class="btn btn-danger btn-lg mx-2"><span>Logout</span></a>
+        <a href="#addStudentModal" class="btn btn-success btn-lg mx-2 d-flex align-items-center" data-toggle="modal"><i class="material-icons">person_add</i><span>Add New Student</span></a>
+        <a href="report.php" class="btn btn-primary btn-lg mx-2 d-flex align-items-center"><i class="material-icons">print</i><span>Print Report</span></a>
+        <a href="trash.php" class="btn btn-warning btn-lg mx-2 d-flex align-items-center" style="color:white;"><i class="material-icons">delete</i><span>Trash</span></a>
+        <a href="logout.php" class="btn btn-danger btn-lg mx-2 d-flex align-items-center" ><i class="material-icons">logout</i><span>Logout</span></a>
     </div>
     <div class="container">
-        <!-- GET MESSAGE IF SUCCESS -->
         <?php if (isset($_GET['message'])): ?>
-            <div class="alert alert-success text-center" role="alert" id="alert">
+            <div class="alert alert-success text-center mt-4" role="alert" id="alert">
                 <?php
                 if ($_GET['message'] == "success-add") {
                     echo "Successfully Added Student.";
                 } else if ($_GET['message'] == "success-update") {
                     echo "Successfully Updated Student.";
                 } else if ($_GET['message'] == "success-delete") {
-                    echo "Successfully Deleted Student.";
+                    echo "Successfully moved to Trash.";
                 }
                 ?>
 
@@ -180,7 +197,6 @@ if (isset($_POST['btnUpdate'])) {
         </div>
     </div>
 
-    <!-- add student modal -->
     <div id="addStudentModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -220,7 +236,6 @@ if (isset($_POST['btnUpdate'])) {
         </div>
     </div>
 
-    <!-- edit student modal -->
     <div id="editStudentModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -253,8 +268,8 @@ if (isset($_POST['btnUpdate'])) {
                     </div>
 
                     <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" name="btnUpdate">Update</button>            
                         <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-success" name="btnUpdate">Update</button>
                     </div>
                 </form>
             </div>
@@ -266,7 +281,6 @@ if (isset($_POST['btnUpdate'])) {
         }, 3000);
     </script>
 
-    <!-- script of edit button -->
     <script type="text/javascript">
         $('.edit').click(function() {
             var $row = $(this).closest('tr');

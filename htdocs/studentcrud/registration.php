@@ -9,7 +9,7 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>PHP Tutorials</title>
+	<title>Register</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 
@@ -32,7 +32,7 @@ session_start();
 				class="img-fluid w-50 mb-3"
 				style="margin-top: 20px;">
 			</center>
-			<h1 class="h3 mb-3 font-weight-normal text-center">Please Sign In</h1>
+			<h1 class="h3 mb-3 font-weight-normal text-center">Create U</h1>
 			<label for="username" class="font-weight-bold mr-auto">Username:</label>
 			<input type="text" name="username" class="form-control mb-3" placeholder="Username" required="">
 
