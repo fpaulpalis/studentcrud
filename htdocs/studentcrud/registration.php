@@ -33,6 +33,7 @@ session_start();
 				style="margin-top: 20px;">
 			</center>
 			<h1 class="h3 mb-3 font-weight-normal text-center">Create U</h1>
+			<h1 class="h3 mb-3 font-weight-normal text-center">Add User</h1>
 			<label for="username" class="font-weight-bold mr-auto">Username:</label>
 			<input type="text" name="username" class="form-control mb-3" placeholder="Username" required="">
 
