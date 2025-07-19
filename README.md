@@ -28,13 +28,13 @@ This project is based on the tutorial series:
 
 | Feature  | Screenshot |
 |----------|------------|
-| **Login**    | <img src="https://github.com/user-attachments/assets/06c4ab6b-a952-4302-b9af-4289dcc8617c" width="600" /> |
-| **Register** | <img src="https://github.com/user-attachments/assets/c101e059-fe91-433c-8190-0255eca65656" width="600" /> |
-| **Create**   | <img src="https://github.com/user-attachments/assets/d142c4a2-cb04-475f-953b-f9b970f01fac" width="600" /> |
-| **Read**     | <img src="https://github.com/user-attachments/assets/506fac89-8ece-41f4-a57a-0975f22aad98" width="600" /> |
-| **Update**   | <img src="https://github.com/user-attachments/assets/d191d314-12c9-4788-a341-48ca0ae2bf88" width="600" /> |
-| **Delete**   | <img src="https://github.com/user-attachments/assets/f02afc12-4f67-4a2b-a705-d6439611d74d" width="600" /> |
-| **Print**    | <img src="https://github.com/user-attachments/assets/be96c9ac-e76f-4789-8c0a-5b59335711d7"  width="600" /> |
+| **Login**    | <img src="https://github.com/user-attachments/assets/b8c60627-520b-4266-b35b-f179e0a72af4" width="600" /> |
+| **Register** | <img src="https://github.com/user-attachments/assets/22fa94a2-dafd-4396-86d8-7b78ff009098" width="600" /> |
+| **Create**   | <img src="https://github.com/user-attachments/assets/03815557-4889-4453-8114-cbc6baac505f" width="600" /> |
+| **Read**     | <img src="https://github.com/user-attachments/assets/56e02f11-7340-4546-93e3-2bb4dd9e50b9" width="600" /> |
+| **Update**   | <img src="https://github.com/user-attachments/assets/d755724c-dd57-4069-903a-3f4f5b1c5021" width="600" /> |
+| **Delete**   | <img src="https://github.com/user-attachments/assets/118c7ac2-1761-45e3-8f6f-75e959126b4a" width="600" /> |
+| **Print**    | <img src="https://github.com/user-attachments/assets/3eb70e59-5c43-48fe-97c0-94130a2ad31b"  width="600" /> |
 
 
 -----
