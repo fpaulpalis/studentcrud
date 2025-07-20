@@ -30,7 +30,7 @@ This project is based on the tutorial series:
 |----------|------------|
 | **Login**    | <img src="https://github.com/user-attachments/assets/b8c60627-520b-4266-b35b-f179e0a72af4" width="600" /> |
 | **Register** | <img src="https://github.com/user-attachments/assets/22fa94a2-dafd-4396-86d8-7b78ff009098" width="600" /> |
-| **Create**   | <img src="https://github.com/user-attachments/assets/03815557-4889-4453-8114-cbc6baac505f" width="600" /> |
+| **Create**   | <img src="https://github.com/user-attachments/assets/6301fac0-68d5-4cb3-8977-404f3247ed38" width="600" /> |
 | **Read**     | <img src="https://github.com/user-attachments/assets/56e02f11-7340-4546-93e3-2bb4dd9e50b9" width="600" /> |
 | **Update**   | <img src="https://github.com/user-attachments/assets/d755724c-dd57-4069-903a-3f4f5b1c5021" width="600" /> |
 | **Delete**   | <img src="https://github.com/user-attachments/assets/118c7ac2-1761-45e3-8f6f-75e959126b4a" width="600" /> |
