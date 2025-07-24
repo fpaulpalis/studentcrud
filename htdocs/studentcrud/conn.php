@@ -1,4 +1,3 @@
-<!-- Hello! -->
 <?php 
 $host = "localhost";
 $db_username = "root";
