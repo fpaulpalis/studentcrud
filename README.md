@@ -2,6 +2,14 @@
 - Create a basic web application that performs Create, Read, Update, and Delete (CRUD) operations.
 - Follow the groupings on our first activity.
 
+## Group 2 Members
+1. Basa, Fiona Gene
+2. Deodora, Don Jasper
+3. Estonilo, Charm Azeneth
+4. Palis, Francis Paul
+5. Salango, Alyza Mae
+6. Yu, Kimberly
+
 -----
 
 ## 🔗 Original Source Code
