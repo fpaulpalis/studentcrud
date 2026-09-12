@@ -1,8 +1,21 @@
-# Activity: Build a Simple CRUD Web App Using HTML and SQL
+# Student CRUD - Simple PHP MySQL Web App
+
+![Archived](https://img.shields.io/badge/status-archived-lightgrey?style=for-the-badge)
+![No Longer Maintained](https://img.shields.io/badge/maintained%3F-no-red?style=for-the-badge)
+![School Project](https://img.shields.io/badge/type-school%20activity-blue?style=for-the-badge)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+
+> **⚠️ ARCHIVED - No Longer Maintained**
+> This project was created as a school activity and is now archived. It is no longer actively maintained. It is kept for educational and portfolio purposes only.
+
+### Activity: Build a Simple CRUD Web App Using HTML and SQL
 - Create a basic web application that performs Create, Read, Update, and Delete (CRUD) operations.
 - Follow the groupings on our first activity.
 
-## Group 2 Members
+#### Group 2 Members
 1. Basa, Fiona Gene
 2. Deodora, Don Jasper
 3. Estonilo, Charm Azeneth
@@ -10,28 +23,43 @@
 5. Salango, Alyza Mae
 6. Yu, Kimberly
 
------
+---
 
-## 🔗 Original Source Code
+## 📖 What the project does
 
-This project is based on the tutorial series:
+**studentcrud** is a simple student management web app built with PHP and MySQL. It implements basic authentication and full CRUD functionality:
 
-* **[PHP Tutorials](https://www.youtube.com/playlist?list=PLZy3ZnuAwXl7U0HdBpLoY6ssNNBOQIDoW).** Directed by ProgrammingVlogs
-    * [PHP Part 1 Simple Login & Register System using MYSQL and PHP](https://www.youtube.com/watch?v=xyf_VJHzSD0&list=PLZy3ZnuAwXl7U0HdBpLoY6ssNNBOQIDoW&index=1)
-    * [PHP Part 2(1) Simple CRUD System with Reporting using MYSQL and PHP (CREATE & READ)](https://www.youtube.com/watch?v=GFWKAkNji2U&list=PLZy3ZnuAwXl7U0HdBpLoY6ssNNBOQIDoW&index=2)
-    * [PHP Part 2(2) SIMPLE CRUD w/ Report Printing USING PHP, MYSQL, and BOOTSTRAP(EDIT, DELETE, UPDATE,) ](https://www.youtube.com/watch?v=nlUHr1wd9Bc&list=PLZy3ZnuAwXl7U0HdBpLoY6ssNNBOQIDoW&index=3)
------
+- User authentication (Login, Register, Logout)
+- Create new student records
+- Read / View all student records in a table
+- Update existing student records
+- Delete student records
+- Print / Generate report of records
+- Responsive UI using Bootstrap
+
+## 💡 Why the project is useful
+
+This project is useful as a beginner-friendly reference for:
+
+- Learning how PHP connects to MySQL using `mysqli`
+- Understanding session-based authentication flow
+- Implementing core CRUD operations in a single project
+- Practicing Bootstrap for frontend layout
+- A starting template for school CRUD activities
+
+This is intended for educational purposes, not for production use.
 
 ## 🚀 Features
 
-* Login
-* Register
-* Logout
-* CRUD
-* Print
-* Boostrap
+- Login
+- Register
+- Logout
+- CRUD (Create, Read, Update, Delete)
+- Print Report
+- Bootstrap 5 UI
 
------
+---
+
 ## 📸 Screenshots
 
 | Feature  | Screenshot |
@@ -44,77 +72,91 @@ This project is based on the tutorial series:
 | **Delete**   | <img src="https://github.com/user-attachments/assets/118c7ac2-1761-45e3-8f6f-75e959126b4a" width="600" /> |
 | **Print**    | <img src="https://github.com/user-attachments/assets/3eb70e59-5c43-48fe-97c0-94130a2ad31b"  width="600" /> |
 
+---
 
------
+## 🚀 How users can get started with the project
 
-## ⚙️ Requirements
+### ⚙ Requirements
 
-Before you begin, ensure you have the following installed:
+- **XAMPP** (or any PHP server with MySQL/MariaDB)
+- **PHP 7.4+**
+- **MySQL 5.7+** or **MariaDB**
+- A modern web browser
 
-  * **XAMPP** (or any PHP server with MySQL/MariaDB)
-  * **PHP 7.4+**
-  * **MySQL 5.7+** or **MariaDB**
-  * A modern web browser
+### 🛠 Setup Instructions
 
------
-
-## 🛠️ Setup Instructions
-
-Follow these steps to get the application running on your local machine:
-
-### 1\. 📥 Clone or Download
-
-Get the project files by cloning the repository or downloading the ZIP:
-
+#### 1. 📥 Clone or Download
 ```bash
 git clone https://github.com/nameispaul/studentcrud.git
 ```
 
-### 2\. 📁 Place in XAMPP `htdocs`
+#### 2. 📂 Move to Web Server Directory
+Place the project folder inside your server's root directory (e.g., `htdocs` for XAMPP).
 
-Move the entire `studentcrud` folder into your XAMPP `htdocs` directory (e.g., `C:\xampp\htdocs\studentcrud\`).
+#### 3. 🗄️ Import the Database
+- Open **phpMyAdmin**.
+- Create a new database (e.g., `studentcrud`).
+- Import the provided `.sql` file from the project's `database/` folder.
 
-### 3\. 🧱 Create the Database
-
-1.  Open **phpMyAdmin** in your browser (usually `http://localhost/phpmyadmin`).
-2.  Click on the **"Import"** tab.
-3.  Choose the `studentcrud.sql` file from your project folder.
-4.  Click **"Go"** to import the database. This will create the `studentcrud` database, along with `tbl_user` and `tbl_student` tables, pre-filled with sample data.
-
-### 4\. 🔗 Configure Database Connection
-
-Open `conn.php` and verify that the database credentials match your local setup. The default settings are usually correct for XAMPP:
+#### 4. ⚙ Configure Database Connection
+Edit the database configuration file (e.g., `config.php` or `db_connect.php`) and update:
 
 ```php
-<?php
 $host = "localhost";
-$db_username = "root";
-$db_password = ""; // Often empty for XAMPP
-$db_name = "studentcrud";
-
-$conn = mysqli_connect($host, $db_username, $db_password, $db_name);
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-?>
+$user = "root";
+$pass = "";
+$dbname = "studentcrud";
 ```
 
-### 5\. ▶️ Run the Application
+#### 5. ▶️ Run the App
+Open your browser and go to:
+```
+http://localhost/studentcrud
+```
 
-1.  Start **Apache** and **MySQL** services in your XAMPP control panel.
-2.  Open your web browser and navigate to:
-    `http://localhost/studentcrud/login.php`
+#### 6. 🔑 Default Login (if provided)
+Use the credentials from the imported SQL file or register a new account.
 
------
+---
 
-## 🔐 Default User Logins
+## 🆘 Where users can get help with the project
 
-You can use these credentials to log in immediately, or register a new user:
+Since this project is **archived and no longer maintained**, support is limited. However, you can:
 
-| Username | Password | Full Name     |
-| :------- | :------- | :------------ |
-| `admin`  | `admin`  | Admin Admin   |
-| `sample` | `sample` | Sample Sample |
+- 📚 Review the code and comments for guidance.
+- 🐛 Open an issue on GitHub (responses may be delayed or not provided).
+- 💬 Ask in community forums like **Stack Overflow** for PHP/MySQL-related questions.
+- 📖 Refer to the official documentation:
+  - [PHP Manual](https://www.php.net/manual/en/)
+  - [MySQL Documentation](https://dev.mysql.com/doc/)
+  - [Bootstrap Docs](https://getbootstrap.com/docs/)
 
------
+> **Note:** This repository is kept for educational and portfolio purposes only. No active support is guaranteed.
 
+---
+
+## 👥 Who maintains and contributes to the project
+
+**This project is archived and no longer maintained.**
+
+It was originally developed as a **school activity** by **Group 2**:
+
+| Name | Role |
+|------|------|
+| Basa, Fiona Gene | Group Member |
+| Deodora, Don Jasper | Group Member |
+| Estonilo, Charm Azeneth | Group Member |
+| Palis, Francis Paul | Group Member |
+| Salango, Alyza Mae | Group Member |
+| Yu, Kimberly | Group Member |
+
+### Contributions
+This repository is **not accepting contributions** as it is archived. Feel free to fork it for your own learning purposes.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
